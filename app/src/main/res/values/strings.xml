@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Movies</string>
+    <string name="rating">Rating 8.2</string>
+    <string name="movie">Movies</string>
+    <string name="bookmark">Bookmark</string>
+    <string name="overview">After saving the life of their heir apparent, tenacious loner Snake Eyes is welcomed into an ancient Japanese clan called the Arashikage where he is taught the ways of the ninja warrior. But, when secrets from his past are revealed, Snake Eyes honor and allegiance will be tested – even if that means losing the trust of those closest to him.</string>
+    <string name="tidak_ada_data">Tidak ada data</string>
+    <string name="add_bookmark">Menambahkan ke Bookmark</string>
+    <string name="remove_bookmark">Menghapus dari Bookmark</string>
+    <string name="img_desc">Gambar poster</string>
+    <string name="empty">Empty</string>
+    <string name="back">Back</string>
+    <string name="age">13+</string>
+    <string name="title_detail">Avengers: End Game</string>
+    <string name="tile_overview">Overview</string>
+    <string name="morning">Good Morning</string>
+    <string name="mufkhalif">Mufkhalif</string>
+    <string name="title_bookmark">Bookmark</string>
+</resources>
