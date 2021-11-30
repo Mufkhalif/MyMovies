@@ -14,8 +14,6 @@ import com.example.movies.R
 import com.example.movies.databinding.FragmentMovieBinding
 import com.example.movies.ui.detail.DetailMovieActivity
 import org.koin.android.viewmodel.ext.android.viewModel
-import retrofit2.Response
-
 
 class MovieFragment : Fragment() {
     private val movieViewModel: MovieViewModel by viewModel()
@@ -56,7 +54,6 @@ class MovieFragment : Fragment() {
                         binding?.tvEmpty?.visibility = View.GONE
                         binding?.rvMovies?.visibility = View.VISIBLE
                         binding?.progressBar?.visibility = View.GONE
-                        binding?.btnRefresh?.visibility = View.GONE
                         movies.data?.let { movieAdapter.setData(it) }
                     }
 
@@ -79,10 +76,6 @@ class MovieFragment : Fragment() {
         binding?.tvEmpty?.visibility = View.VISIBLE
         binding?.tvEmpty?.text = response.message ?: getString(R.string.network_error)
         binding?.rvMovies?.visibility = View.GONE
-        binding?.btnRefresh?.apply {
-            visibility = View.VISIBLE
-            setOnClickListener { initialRecyclerview() }
-        }
     }
 
 

@@ -91,4 +91,5 @@ public *;
 -keep class * extends com.google.gson.annotations.SerializedName
 -keep class com.example.apps.android.model.** { <fields>; }
 -keepclassmembers class com.example.core.domain.model.Movie {<fields>;}
+-keepclassmembers class com.example.core.data.source.remote.response.MovieResponse {<fields>;}
 -keep class * extends com.example.core.utils.MovieDiffCallback
