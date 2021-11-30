@@ -20,6 +20,7 @@ android {
         buildConfigField("String", "API_KEY", '"b650046bf640e7bf7054093854b8d02a"')
         buildConfigField("String", "BASE_URL", '"https://api.themoviedb.org/3/"')
         buildConfigField("String", "HOST_NAME", '"api.themoviedb.org"')
+        buildConfigField("String", "SSL_SERTIFICATION", '"sha256/oD/WAoRPvbez1Y2dfYfuo4yujAcYHXdv1Ivb2v2MOKk="')
     }
 
     buildTypes {

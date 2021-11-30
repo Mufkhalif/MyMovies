@@ -37,9 +37,9 @@ val networkModule = module {
     single {
         val httpClient = OkHttpClient.Builder()
 
-//        val certificatePinner = CertificatePinner.Builder()
-//            .add(BuildConfig.HOST_NAME,)
-//            .build()
+        val certificatePinner = CertificatePinner.Builder()
+            .add(BuildConfig.HOST_NAME, BuildConfig.SSL_SERTIFICATION)
+            .build()
 
 
         if (BuildConfig.DEBUG) {
@@ -51,7 +51,7 @@ val networkModule = module {
         httpClient
             .connectTimeout(120, TimeUnit.SECONDS)
             .readTimeout(120, TimeUnit.SECONDS)
-//            .certificatePinner(certificatePinner)
+            .certificatePinner(certificatePinner)
             .build()
     }
 
