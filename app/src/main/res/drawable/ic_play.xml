@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:width="72dp"
     android:height="72dp"
     android:viewportWidth="72"
-    android:viewportHeight="72">
+    android:viewportHeight="72"
+    tools:keep="@drawable/ic_play">
 
     <path
         android:fillAlpha="0.75"

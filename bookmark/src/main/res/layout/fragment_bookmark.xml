@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/dark"
     tools:context=".BookmarkFragment">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -21,21 +20,19 @@
         tools:listitem="@layout/item_movie" />
 
     <TextView
-        android:id="@+id/tv_empty"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fontFamily="@font/poppins_bold"
         android:gravity="center"
         android:text="@string/empty"
         android:textColor="@color/white_text"
-
+        android:id="@+id/tv_empty"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ProgressBar
-        android:id="@+id/progress_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
