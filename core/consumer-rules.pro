@@ -86,6 +86,7 @@ public *;
 # Uncomment if you use RxJava
 #-dontwarn java.util.concurrent.Flow*
 
+-keep class android.arch.** { *; }
 -keep class * extends androidx.room.RoomDatabase
 -keep class * extends androidx.lifecycle.ViewModelStoreOwner
 -keep class * extends com.google.gson.annotations.SerializedName
@@ -93,3 +94,8 @@ public *;
 -keepclassmembers class com.example.core.domain.model.Movie {<fields>;}
 -keepclassmembers class com.example.core.data.source.remote.response.MovieResponse {<fields>;}
 -keep class * extends com.example.core.utils.MovieDiffCallback
+
+-dontwarn android.support.**
+-keep class android.support.v4.** { *; }
+-keep interface android.support.v4.app.** { *; }
+-keepattributes *Annotation*
