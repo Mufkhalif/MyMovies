@@ -16,6 +16,5 @@
     <string name="morning" tools:keep="@string/morning">Good Morning</string>
     <string name="mufkhalif" tools:keep="@string/mufkhalif">Mufkhalif</string>
     <string name="title_bookmark">Bookmark</string>
-    <string name="refresh">Muat ulang</string>
     <string name="network_error">Terjadi kesalahan</string>
 </resources>
