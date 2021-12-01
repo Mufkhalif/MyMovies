@@ -45,10 +45,10 @@ class BookmarkFragment : Fragment() {
                 movieAdapter.setData(movies)
 
                 if (movies.isEmpty()) {
-                    binding?.tvEmpty?.visibility = View.VISIBLE
+                    binding?.emptyView?.visibility = View.VISIBLE
                     binding?.rvMovies?.visibility = View.GONE
                 } else {
-                    binding?.tvEmpty?.visibility = View.GONE
+                    binding?.emptyView?.visibility = View.GONE
                     binding?.rvMovies?.visibility = View.VISIBLE
                 }
 

@@ -1,5 +1,7 @@
 <resources>
-    <string name="title">Title aksdja jkaskjd kaskd akjsdk ajskj kaj s</string>
+    <string name="title">Avengers: End Game</string>
     <string name="popularity">8.3</string>
     <string name="img_desc">Gambar poster</string>
+    <string name="age">18+</string>
+    <string name="genre">Action,Adaventure,Drama</string>
 </resources>

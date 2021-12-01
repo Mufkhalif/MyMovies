@@ -33,6 +33,33 @@ class MovieRepository(
         }
     }
 
+    override fun getMovieLoadmore(page: String, oldData: List<Movie>): Flow<Resource<List<Movie>>> =
+        flow {
+            emit(Resource.Loading())
+
+            when (val apiResponse = remoteDataSource.getMovieLoadmore(page).first()) {
+                is ApiResponse.Success -> {
+                    val data = apiResponse.data
+
+                    val newData = ArrayList<Movie>()
+                    newData.addAll(oldData)
+                    newData.addAll(data)
+
+                    emit(Resource.Success(newData))
+                }
+                is ApiResponse.Empty -> {
+                    emit(Resource.Empty())
+                }
+                is ApiResponse.Error -> {
+                    emit(Resource.Error(apiResponse.errorMessage))
+                }
+            }
+        }
+
+    override suspend fun getMovieLoadmoreNoFlow(
+        page: String,
+    ): ApiResponse<List<Movie>> = remoteDataSource.getMovieLoadmoreNoFlow(page)
+
 
     override fun getDetailMovie(id: String): Flow<Resource<Movie>> = flow {
         emit(Resource.Loading())

@@ -28,6 +28,38 @@ class RemoteDataSource(private val apiService: ApiService) {
         }.flowOn(Dispatchers.IO)
     }
 
+    fun getMovieLoadmore(page: String): Flow<ApiResponse<List<Movie>>> {
+        return flow {
+            try {
+                val response = apiService.getMovieLoadmore(page)
+                val data = response.results
+                if (data.isNotEmpty()) {
+                    emit(ApiResponse.Success(data))
+                } else {
+                    emit(ApiResponse.Empty)
+                }
+            } catch (e: Exception) {
+                emit(ApiResponse.Error(e.toString()))
+                Log.d("RemoteDataSource", e.toString())
+            }
+        }.flowOn(Dispatchers.IO)
+    }
+
+    suspend fun getMovieLoadmoreNoFlow(page: String): ApiResponse<List<Movie>> {
+        return try {
+            val response = apiService.getMovieLoadmore(page)
+            val data = response.results
+            if (data.isNotEmpty()) {
+                ApiResponse.Success(data)
+            } else {
+                ApiResponse.Empty
+            }
+        } catch (e: Exception) {
+            Log.d("RemoteDataSource", e.toString())
+            ApiResponse.Error(e.toString());
+        }
+    }
+
     fun getMovieDetail(id: String): Flow<ApiResponse<Movie>> {
         return flow {
             try {
